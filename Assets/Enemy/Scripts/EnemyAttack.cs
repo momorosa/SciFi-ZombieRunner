@@ -13,9 +13,16 @@ public class EnemyAttack : MonoBehaviour
         target = FindObjectOfType<PlayerHealth>();
     }
 
+    // Testing to see if BroadcastMessage is working
+    // public void OnDamageTaken()
+    // {
+    //     Debug.Log(name + " I also know that we took damage");
+    // }
+
     public void AttackHitEvent()
     {
         if (target == null) return;
         target.TakeDamage(damage);
+
     }
 }
